@@ -1,3 +1,5 @@
+module Test.Spec
+
 import Specdris.Spec
 
 export
