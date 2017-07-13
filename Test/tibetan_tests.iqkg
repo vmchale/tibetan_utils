@@ -1,9 +1,0 @@
-package specdris_tests
-
-pkgs = specdris
-
-opts = "--sourcepath ../ --idrispath ../"
-
-modules = test.Spec
-
-tests = test.Spec
