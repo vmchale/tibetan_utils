@@ -8,6 +8,5 @@ pkgs = lightyear
 
 modules = Test.Spec
         , Tibetan_utils.Lib
-        , Test.Spec
 
 tests = Test.Spec.specSuite

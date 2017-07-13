@@ -5,5 +5,4 @@ bugtracker = http://www.github.com/vmchale/tibetan_utils/issues
 
 pkgs = lightyear
 
-modules = Tibetan_utils
-        , Tibetan_utils.Lib
+modules = Tibetan_utils.Lib
