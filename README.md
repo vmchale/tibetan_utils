@@ -3,9 +3,7 @@
 This is a port of my
 [tibetan-utils](https://hackage.haskell.org/package/tibetan-utils) library. 
 
-As it stands, I'm waiting for Unicode support for this to work. Currently,
-[text](https://github.com/ziman/text) won't build but if that were to be fixed
-many things would be easier.
+As it stands, I'm waiting for Unicode support for this to work.
 
 ## Installation
 
