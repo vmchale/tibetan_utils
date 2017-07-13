@@ -20,9 +20,19 @@ parseDigit c i = do
   char c
   pure i
 
+-- TODO figure out how to make this lazy
 parseNumeral : Parser Int
-parseNumeral = foldr (<|>) (parseDigit '༠' 0) $ zipWith parseDigit string (0::[1..10])
-  where string = unpack "༠༡༢༣༤༥༦༧༨༩"
+parseNumeral = foldr (<|>) (parseDigit '༠' 0) $ zipWith parseDigit s (0::[1..10])
+  where s = unpack "༠༡༢༣༤༥༦༧༨༩"
+
+parseNumeralFake : Parser Int
+parseNumeralFake = foldr (<|>) (parseDigit '0' 0) $ zipWith parseDigit s (0::[1..10])
+  where s = unpack "0123456789"
+
+parseLatin : Parser Int
+parseLatin = do
+  digits <- reverse <$> some parseNumeralFake
+  (pure . (\x => div x 10) $ foldr ((*10) .* (+)) 0 digits) <?> "Tibetan integer"
 
 export
 
@@ -31,5 +41,8 @@ parseNumber = do
   digits <- reverse <$> some parseNumeral
   (pure . (\x => div x 10) $ foldr ((*10) .* (+)) 0 digits) <?> "Tibetan integer"
 
-readBoV : String -> Either String Int
-readBoV = parse (parseNumber)
+readBo : String -> Either String Int
+readBo = parse (parseNumber)
+
+readTest : String -> Either String Int
+readTest = parse parseLatin

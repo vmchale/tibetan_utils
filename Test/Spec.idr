@@ -6,7 +6,9 @@ import Tibetan_utils.Lib
 export
 
 specSuite : IO ()
-specSuite = spec $ do
-  describe "readBoV" $ do
-    it "should parse a tibetan numeral" $ do
-      readBoV "༡༢༦" `shouldBe` Right 126
+specSuite = do
+  spec $ do
+    describe "readTest" $ do
+      it "should parse Latin numerals" $ do
+        readTest "126" `shouldBe` Right 126
+        --readBo "༡༢༦" `shouldBe` Right 126
