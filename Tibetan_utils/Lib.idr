@@ -10,11 +10,11 @@ import public Lightyear.Strings
 
 %access export
 
-parseNumeral : (Integral a) => Parser a
---parseNumeral = foldr (<|>) (parseDigit '༠' "0") ((zipWith : (Integral a) => (Char -> a -> Parser a) -> List Char -> List a -> List (Parser a)) parseDigit "༠༡༢༣༤༥༦༧༨༩" (0:[1..10]))
-parseNumeral = foldr (<|>) (parseDigit '༠' "0") (zipWith parseDigit "༠༡༢༣༤༥༦༧༨༩" (0:[1..10]))
-
-parseDigit : (Integral a) => Char -> a -> Parser a
+parseDigit : Char -> Int -> Parser Int -- (Integral a) => Char -> a -> Parser a
 parseDigit c i = do
   char c
   pure i
+
+parseNumeral : Parser Int
+parseNumeral = foldr (<|>) (parseDigit '༠' 0) $ zipWith parseDigit string (0::[1..10])
+  where string = unpack "༠༡༢༣༤༥༦༧༨༩"
