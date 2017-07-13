@@ -4,6 +4,10 @@ sourceloc  = git://git@github.com:vmchale/tibetan_utils.git
 bugtracker = http://www.github.com/vmchale/tibetan_utils/issues
 
 pkgs = lightyear
+     , specdris
 
-modules = Tibetan_utils
+modules = Test.Spec
         , Tibetan_utils.Lib
+        , Test.Spec
+
+tests = Test.Spec.specSuite
