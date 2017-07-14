@@ -4,16 +4,12 @@
 -- --------------------------------------------------------------------- [ EOH ]
 module Text.Parse.Tibetan
 
+import public Data.Composition
 import public Lightyear
 import public Lightyear.Char
 import public Lightyear.Strings
 
 %access export
-
-infixr 10 .*
-
-(.*) : (c -> d) -> (a -> b -> c) -> (a -> b -> d)
-(.*) f g = \x, y => f (g x y)
 
 parseDigit : (Integral a) => Char -> a -> Parser a
 parseDigit c i = do

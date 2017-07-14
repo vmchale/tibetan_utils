@@ -4,6 +4,7 @@ sourceloc  = git://git@github.com:vmchale/tibetan_utils.git
 bugtracker = http://www.github.com/vmchale/tibetan_utils/issues
 
 pkgs = lightyear
+     , composition
 
 modules = Text.Parse.Tibetan
         , Text.Show.Tibetan

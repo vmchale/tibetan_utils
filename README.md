@@ -7,7 +7,8 @@ As it stands, I'm waiting for Unicode support for this to work.
 
 ## Installation
 
-First, get [lightyear](https://github.com/ziman/lightyear) and install that.
+First, get [lightyear](https://github.com/ziman/lightyear) and install that
+along with [composition](https://github.com/vmchale/composition).
 Then:
 
 ```
