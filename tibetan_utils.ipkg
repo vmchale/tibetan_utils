@@ -5,4 +5,4 @@ bugtracker = http://www.github.com/vmchale/tibetan_utils/issues
 
 pkgs = lightyear
 
-modules = Tibetan_utils.Lib
+modules = Text.Tibetan.Parser
