@@ -1,7 +1,7 @@
 module Test.Spec
 
 import Specdris.Spec
-import Tibetan_utils.Lib
+import Text.Parse.Tibetan
 
 export
 

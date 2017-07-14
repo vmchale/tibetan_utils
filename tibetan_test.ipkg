@@ -7,6 +7,6 @@ pkgs = lightyear
      , specdris
 
 modules = Test.Spec
-        , Tibetan_utils.Lib
+        , Text.Parse.Tibetan
 
 tests = Test.Spec.specSuite

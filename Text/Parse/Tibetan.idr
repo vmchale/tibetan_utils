@@ -1,8 +1,8 @@
--- -------------------------------------------------------------- [ Parser.idr ]
--- Module      : Text.Tibetan.Parser
+-- ------------------------------------------------------------- [ Tibetan.idr ]
+-- Module      : Text.Parse.Tibetan
 -- Description : Parsers for Tibetan numerals.
 -- --------------------------------------------------------------------- [ EOH ]
-module Text.Tibetan.Parser
+module Text.Parse.Tibetan
 
 import public Lightyear
 import public Lightyear.Char
