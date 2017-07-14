@@ -6,3 +6,4 @@ bugtracker = http://www.github.com/vmchale/tibetan_utils/issues
 pkgs = lightyear
 
 modules = Text.Parse.Tibetan
+        , Text.Show.Tibetan
