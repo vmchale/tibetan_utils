@@ -4,6 +4,8 @@
 -- --------------------------------------------------------------------- [ EOH ]
 module Text.Parse.Tibetan
 
+%default total
+
 %access export
 
 replace : (Eq a) => a -> a -> List a -> List a

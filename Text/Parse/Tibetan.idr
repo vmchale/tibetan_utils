@@ -2,6 +2,7 @@
 -- Module      : Text.Parse.Tibetan
 -- Description : Parsers for Tibetan numerals.
 -- --------------------------------------------------------------------- [ EOH ]
+||| This module contains an integer parser for Tibetan numerals.
 module Text.Parse.Tibetan
 
 import public Data.Composition
