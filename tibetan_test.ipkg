@@ -5,6 +5,7 @@ bugtracker = http://www.github.com/vmchale/tibetan_utils/issues
 
 pkgs = lightyear
      , specdris
+     , composition
 
 modules = Test.Spec
         , Text.Parse.Tibetan
